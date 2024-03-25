@@ -1,0 +1,62 @@
+<div mat-dialog-title>
+    <h1>Cadastro de solicitações</h1>
+</div>
+
+<form [formGroup]="reqForm" (ngSubmit)="onFormSubmit()">
+    <div mat-dialog-content>
+        <div class="column">
+            <mat-form-field *ngIf="!data">
+                <mat-label>Nome</mat-label>
+                <input matInput placeholder="Nome do solicitante" formControlName="RequesterName">
+            </mat-form-field>
+            <mat-form-field *ngIf="data" class="example-full-width" >
+                <mat-label>Nome</mat-label>
+                <input matInput disabled value="{{data.RequesterName}}">
+            </mat-form-field>
+            <mat-form-field *ngIf="!data">
+                <mat-label>Descrição</mat-label>
+                <textarea matInput placeholder="Descrição do produto" formControlName="ItemDescription"></textarea>
+            </mat-form-field>
+            <mat-form-field *ngIf="data">
+                <mat-label>Descrição</mat-label>
+                <textarea matInput readonly disabled value="{{data.ItemDescription}}"></textarea>
+            </mat-form-field>
+            <mat-form-field *ngIf="!data">
+                <mat-label>Valor (R$)</mat-label>
+                <input type="text" matInput formControlName="ProductPrice" currencyMask 
+                    onclick="this.select()"
+                    placeholder="Insira o valor"
+                >
+            </mat-form-field>
+            <mat-form-field *ngIf="data">
+                <mat-label>Valor (R$)</mat-label>
+                <input type="text" matInput disabled value="R${{data.ProductPrice}}" currencyMask 
+                    onclick="this.select()"
+                >
+            </mat-form-field>
+
+            <!-- Itens exclusivos do almoxarife -->
+            <div style="display: flex;" [ngStyle]="getStatusDescription(data)">
+                <mat-form-field style="width: 30%;">
+                    <mat-label>Status</mat-label>
+                    <mat-select formControlName="RequestStatus" id="statusSelect">
+                    <mat-option value="P">Pendente</mat-option>
+                    <mat-option value="A">Aprovar</mat-option>
+                    <mat-option value="R">Reprovar</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <mat-form-field style="margin-left: 10px;width: 70%;">
+                    <mat-label>Descrição do Status</mat-label>
+                    <textarea id="statusDescriptionText" matInput placeholder="Motivo do Status selecionado" formControlName="StatusDescription"></textarea>
+                </mat-form-field>
+            </div>
+        </div>
+    </div>
+
+    <div mat-dialog-actions class="mat-dialog-actions">
+        <div>
+            <button mat-raised-button type="button" [mat-dialog-close]="false">Cancelar</button>
+            <button mat-raised-button color="primary" type="submit">{{data ? 'Atualizar' : 'Salvar'}}</button>
+        </div>
+    </div>
+</form>

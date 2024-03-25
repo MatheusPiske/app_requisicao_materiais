@@ -1,0 +1,28 @@
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.typeUSer {
+    margin-top: 22px;
+    width: 200px;
+    height: 72px;
+    margin-left: 20px;
+}
+
+.main-body {
+    padding-top: 20px;
+    margin: 0 auto;
+    max-width: 1248px;
+}
+
+.filter-container {
+    width: 100%;
+}
+
+.example-button {
+    margin-top: 16px;
+}
+  
+.example-tooltip-uppercase {
+  text-transform: uppercase;
+}

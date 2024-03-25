@@ -1,0 +1,15 @@
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.mat-dialog-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.disabledInput {
+    cursor: not-allowed;
+    pointer-events: none;
+  }
