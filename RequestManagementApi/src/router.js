@@ -8,6 +8,7 @@ routes.get('/List/:requestId', controllerRequest.GetByRequestID);
 routes.get('/List/Status/:requestStatus', controllerRequest.GetByRequestStatus);
 routes.get('/List/Requester/:requesterName', controllerRequest.GetByRequesterName);
 routes.get('/List/Item/:itemDescription', controllerRequest.GetByItemDescription);
+routes.get('/LastCreated', controllerRequest.GetLastCreated);
 routes.post('/Create', controllerRequest.Create);
 routes.put('/Update/:requestId', controllerRequest.Update);
 routes.delete('/Delete/:requestId', controllerRequest.Delete);

@@ -32,6 +32,10 @@ Request.init(
             type: sequelize.STRING,
             allowNull: false,
         },
+        StatusDescription: {
+            type: sequelize.STRING,
+            allowNull: false,
+        }
     },
     {
         sequelize: database, modelName: 'PurchaseRequests', schema

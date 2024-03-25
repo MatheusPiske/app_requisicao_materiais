@@ -1,8 +1,16 @@
 const express = require('express');
-const api = express();
+const cors = require('cors');
+
+const app = express();
+const port = 8300;
 const routes = require('./router');
 
-api.use(express.json());
-api.use(routes);
+app.use(cors({
+  origin: 'http://localhost:4200'
+}));
+app.use(express.json());
+app.use(routes);
 
-api.listen(4200);
+app.listen(port, () => {
+  console.log(`Server listening on port ${port}`);
+});

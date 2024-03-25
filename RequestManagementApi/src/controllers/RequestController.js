@@ -75,6 +75,18 @@ module.exports = {
         }
     },
 
+    async GetLastCreated(req, res) {
+        try {
+            const lastRequest = await RequestModel.findOne({
+                order: [['createdAt', 'DESC']]
+            });
+            return res.json(lastRequest);
+        } catch (error) {
+            console.error("GetLastCreated error: ", error);
+            return res.status(500).json({ error: error.message });
+        }
+    },
+
     async Create(req, res) {
         try {
             const requests = await RequestModel.create({
@@ -84,6 +96,7 @@ module.exports = {
                 ProductPrice: req.body.ProductPrice,
                 Quantity: req.body.Quantity,
                 RequestStatus: req.body.RequestStatus,
+                StatusDescription: req.body.StatusDescription,
             });
             return res.json(requests);
         } catch (error) {
@@ -100,6 +113,7 @@ module.exports = {
                 return res.status(404).json({ error: 'Request not found' });
             }
             purchaseRequest.RequestStatus = req.body.RequestStatus;
+            purchaseRequest.StatusDescription = req.body.StatusDescription;
             await purchaseRequest.save();
             return res.json(purchaseRequest);
         } catch (error) {
