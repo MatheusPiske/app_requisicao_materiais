@@ -30,8 +30,7 @@ Controle total dos itens que estão sendo pedidos.
 
 ## 👩‍💻 Configurando o ambiente:
 
-Execute o seguinte comando no terminal do back-end e front-end para baixar todas as
-dependências do projeto: npm install
+Execute o seguinte comando no terminal dos diretórios do back e front-end para baixar todas as dependências do projeto: npm install
 
 ## 1. Back-end (API):
 
