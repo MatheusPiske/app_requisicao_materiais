@@ -1,5 +1,5 @@
 # Gerenciamento de Solicitações de Compra
-###** Seja bem-vindo ao Gerenciador de Solicitações de Compra, uma solução para otimizar o processo de compras!**
+### ** Seja bem-vindo ao Gerenciador de Solicitações de Compra, uma solução para otimizar o processo de compras!**
 
 ## ✨ O que o Gerenciador oferece:
 
