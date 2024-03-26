@@ -53,7 +53,9 @@ select distinct local_tcp_port
 - Para realizar a conexão com o SQL SERVER, é necessário seguir os seguintes passos: Acessar o programa "Sql Server Configuration Manager" ->
   Configurações de Rede do SQl Server -> Protocolos para (nome do seu servidor) -> Habilitar a conexão TCP/IP.
 
-* A API cria automaticamente a tabela de solicitações de compra, se necessário. *
+#### * A API cria automaticamente a tabela de solicitações de compra, se necessário. *
+
+#### No arquivo server.js, configurar a porta do front-end para não ter problemas de CORS.
 
 ### 2. Front-end:
 
