@@ -37,28 +37,28 @@ dependências do projeto: npm install
 ## 1. Back-end (API):
 
 - Requisitos: Node.JS com frameworks express, sequelize (Método MVC).
-- Configuração do banco de dados:
-#### Edite o arquivo db.js e insira o nome do seu usuário para acessar o servidor do SQL Server em 'seu_nome',
-#### sua respectiva senha em 'sua_senha' e a porta onde o servidor está ativo em 'sua_porta':
+###Configuração do banco de dados:
+
+- Edite o arquivo db.js e insira o nome do seu usuário para acessar o servidor do SQL Server em 'seu_nome',sua respectiva senha em 'sua_senha' e a porta onde o servidor está ativo em 'sua_porta':
 
 const database = new sequelize('PurchaseManagement', 'seu_usuario', 'sua_senha',{
     dialect: 'mssql', host: 'localhost', port: 'sua_porta'
 });
 
-#### Comando para encontrar a porta do SQL Server:
+- Comando para encontrar a porta do SQL Server:
 
 select distinct local_tcp_port
   from sys.dm_exec_connections
  where local_tcp_port is not null
 
-#### Sobre a conexão com o banco de dados SQL Server
+- Sobre a conexão com o banco de dados SQL Server
 
 - Para realizar a conexão com o SQL SERVER, é necessário seguir os seguintes passos: Acessar o programa "Sql Server Configuration Manager" ->
   Configurações de Rede do SQl Server -> Protocolos para (nome do seu servidor) -> Habilitar a conexão TCP/IP.
 
-#### * A API cria automaticamente a tabela de solicitações de compra, se necessário. *
+- * A API cria automaticamente a tabela de solicitações de compra, se necessário. *
 
-#### No arquivo server.js, configurar a porta do front-end para não ter problemas de CORS.
+- No arquivo server.js, configurar a porta do front-end para não ter problemas de CORS.
 
 
 ## 2. Front-end:
