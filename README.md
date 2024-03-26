@@ -48,6 +48,11 @@ select distinct local_tcp_port
   from sys.dm_exec_connections
  where local_tcp_port is not null
 
+#### Sobre a conexão com o banco de dados SQL Server
+
+- Para realizar a conexão com o SQL SERVER, é necessário seguir os seguintes passos: Acessar o programa "Sql Server Configuration Manager" ->
+  Configurações de Rede do SQl Server -> Protocolos para (nome do seu servidor) -> Habilitar a conexão TCP/IP.
+
 * A API cria automaticamente a tabela de solicitações de compra, se necessário. *
 
 ### 2. Front-end:
