@@ -35,8 +35,11 @@ Controle total dos itens que estão sendo pedidos.
 
 - Requisitos: Node.JS com frameworks express, sequelize (Método MVC).
 - Configuração do banco de dados:
-Edite o arquivo db.js e insira as informações do seu banco de dados SQL Server.
-A API cria automaticamente a tabela de solicitações de compra, se necessário.
+Edite o arquivo db.js e insira o nome do seu usuário para acessar o servidor do SQL Server em 'seu_nome'
+e sua respectiva senha em 'sua_senha':
+const database = new sequelize('PurchaseManagement', 'seu_usuario', 'sua_senha',{
+
+* A API cria automaticamente a tabela de solicitações de compra, se necessário. *
 
 ### 2. Front-end:
 
@@ -49,7 +52,7 @@ Configure a URL da API no arquivo app.module.ts.
 Acesse os repositórios do Back-end (API) e do Front-end:
 - Back-end: https://github.com/MatheusPiske/purchase_management_app/tree/main/RequestManagementApi
 - Front-end: https://github.com/MatheusPiske/purchase_management_app/tree/main/RequestManagementApp
-Comece a gerenciar suas solicitações de compra!
+- *** Comece a gerenciar suas solicitações de compra! ***
 ️
 ## Dúvidas ou sugestões?
 
