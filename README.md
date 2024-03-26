@@ -3,9 +3,9 @@
 
 ## ✨ O que o Gerenciador oferece:
 
-Facilidade de uso: Interface responsiva para todos os dispositivos envolvidos no processo de compra.
-Transparência: Acompanhamento do status de cada solicitação em tempo real.
-Controle total: Gerenciamento total das solicitações.
+* Facilidade de uso: Interface responsiva para todos os dispositivos envolvidos no processo de compra.
+* Transparência: Acompanhamento do status de cada solicitação em tempo real.
+* Controle total: Gerenciamento total das solicitações.
 
 Visões de cada área da aplicação:
 
