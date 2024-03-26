@@ -48,7 +48,7 @@ Configure a URL da API no arquivo app.module.ts.
 
 Acesse os repositórios do Back-end (API) e do Front-end:
 - Back-end: https://github.com/MatheusPiske/purchase_management_app/tree/main/RequestManagementApi
-- Front-end: https://github.com/topics/frontend
+- Front-end: https://github.com/MatheusPiske/purchase_management_app/tree/main/RequestManagementApp
 Comece a gerenciar suas solicitações de compra!
 ️
 ## Dúvidas ou sugestões?
