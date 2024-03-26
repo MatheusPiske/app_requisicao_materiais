@@ -36,7 +36,9 @@ dependências do projeto: npm install
 
 ## 1. Back-end (API):
 
-- <b>Requisitos</b>: Node.JS com frameworks express, sequelize (Método MVC).
+- <b>Requisitos</b>: Node.JS com frameworks express, sequelize;
+
+- Modelagem MVC utilizada para criação da API
 
 - Configuração do banco de dados: edite o arquivo db.js e insira o nome do seu usuário para acessar o servidor do SQL Server em 'seu_nome',sua respectiva senha em 'sua_senha' e a porta onde o servidor está ativo em 'sua_porta':
 
