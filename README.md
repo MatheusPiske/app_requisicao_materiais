@@ -56,4 +56,8 @@ Comece a gerenciar suas solicitações de compra!
 Entre em contato através do email: [matheus.piske14b@gmail.com]
 ** Obrigado pela atenção!**
 
+<<<<<<< HEAD
 Desenvolvido com ❤️ por [MatheusPiske].
+=======
+Desenvolvido com ❤️ por [MatheusPiske].
+>>>>>>> main
