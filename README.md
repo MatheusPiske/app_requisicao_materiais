@@ -47,10 +47,9 @@ Configure a URL da API no arquivo app.module.ts.
 ## ** Pronto para começar!**
 
 Acesse os repositórios do Back-end (API) e do Front-end:
-Back-end: https://github.com/topics/backend
-Front-end: https://github.com/topics/frontend
-Siga as instruções de instalação e configuração.
-Comece a gerenciar suas solicitações de compra com mais eficiência!
+- Back-end: https://github.com/topics/backend
+- Front-end: https://github.com/topics/frontend
+Comece a gerenciar suas solicitações de compra!
 ️
 ## Dúvidas ou sugestões?
 
