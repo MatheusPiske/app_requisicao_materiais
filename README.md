@@ -63,7 +63,7 @@ select distinct local_tcp_port
 
 ## 2. Front-end:
 
-Requisitos: Angular e Angular Material.
+- <b>Requisitos</b>: Angular e Angular Material.
 Conexão com a API:
 - Configure as URL's da API no arquivo request.service.ts
 
@@ -77,6 +77,6 @@ Acesse os repositórios do Back-end (API) e do Front-end:
 ## Dúvidas ou sugestões?
 
 Entre em contato através do email: [matheus.piske14b@gmail.com]
-** Obrigado pela atenção!**
+** Obrigado pela atenção! **
 
 Desenvolvido com ❤️ por [MatheusPiske].
