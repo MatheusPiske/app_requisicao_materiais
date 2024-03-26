@@ -31,7 +31,10 @@ Controle total dos itens que estão sendo pedidos.
 
 ## 👩‍💻 Configurando o ambiente:
 
-### 1. Back-end (API):
+Execute o seguinte comando no terminal do projeto no back-end e front-end para baixar todas as
+dependências do projeto: npm install
+
+## 1. Back-end (API):
 
 - Requisitos: Node.JS com frameworks express, sequelize (Método MVC).
 - Configuração do banco de dados:
@@ -57,11 +60,12 @@ select distinct local_tcp_port
 
 #### No arquivo server.js, configurar a porta do front-end para não ter problemas de CORS.
 
-### 2. Front-end:
+
+## 2. Front-end:
 
 Requisitos: Angular e Angular Material.
 Conexão com a API:
-Configure a URL da API no arquivo app.module.ts.
+Configure as URL's da API no arquivo request.service.ts
 
 ## ** Pronto para começar!**
 
