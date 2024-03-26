@@ -1,5 +1,5 @@
 # Gerenciamento de Solicitações de Compra
-### ** Seja bem-vindo ao Gerenciador de Solicitações de Compra! **
+### ** Seja bem-vindo ao seu Gerenciador de Solicitações de Compra! **
 
 ## ✨ O que o Gerenciador oferece:
 
