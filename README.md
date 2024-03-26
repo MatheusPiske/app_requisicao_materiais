@@ -7,7 +7,7 @@
 - Transparência: Acompanhamento do status de cada solicitação em tempo real.
 - Controle total: Gerenciamento total das solicitações.
 
-Visões de cada área da aplicação:
+<b>Visões de cada área da aplicação:</b>
 
 ### 1. Área do Solicitante:
 
