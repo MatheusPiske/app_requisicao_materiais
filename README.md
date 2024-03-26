@@ -27,7 +27,6 @@ Controle total dos itens que estão sendo pedidos.
 - Visão geral de todas as solicitações de compra;
 - Utilização de filtros para encontrar solicitações específicas;
 - Analise do histórico de pedidos para controle total do processo de compras.
-️ Configuração:
 
 ## 👩‍💻 Configurando o ambiente:
 
