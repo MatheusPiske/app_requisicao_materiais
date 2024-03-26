@@ -1,0 +1,131 @@
+<div mat-dialog-title>
+    <h1>Cadastro de solicitações</h1>
+</div>
+
+<form [formGroup]="reqForm" (ngSubmit)="onFormSubmit()">
+    <div mat-dialog-content>
+        <div class="column">
+            <mat-form-field *ngIf="!data">
+                <mat-label>Nome</mat-label>
+                <input
+                    matInput
+                    placeholder="Nome do solicitante"
+                    formControlName="RequesterName"
+                    required
+                />
+                <mat-error
+                    *ngIf="reqForm.get('RequesterName')?.hasError('required')"
+                >
+                    O nome é obrigatório.
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field *ngIf="data" class="example-full-width">
+                <mat-label>Nome</mat-label>
+                <input matInput disabled value="{{ data.RequesterName }}" />
+            </mat-form-field>
+            <mat-form-field *ngIf="!data">
+                <mat-label>Descrição</mat-label>
+                <textarea
+                    matInput
+                    placeholder="Descrição do produto"
+                    formControlName="ItemDescription"
+                    required
+                ></textarea>
+                <mat-error
+                    *ngIf="reqForm.get('ItemDescription')?.hasError('required')"
+                >
+                    A descrição é obrigatória.
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field *ngIf="data">
+                <mat-label>Descrição</mat-label>
+                <textarea
+                    matInput
+                    readonly
+                    disabled
+                    value="{{ data.ItemDescription }}"
+                ></textarea>
+            </mat-form-field>
+            <mat-form-field *ngIf="!data">
+                <mat-label>Valor ($)</mat-label>
+                <input
+                    type="text"
+                    matInput
+                    formControlName="ProductPrice"
+                    currencyMask
+                    onclick="this.select()"
+                    placeholder="Insira o valor"
+                    required
+                />
+                <mat-error
+                    *ngIf="reqForm.get('ProductPrice')?.hasError('required')"
+                >
+                    O valor é obrigatório.
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field *ngIf="data">
+                <mat-label>Valor ($)</mat-label>
+                <input
+                    type="text"
+                    matInput
+                    disabled
+                    value="${{ data.ProductPrice }}"
+                    currencyMask
+                    onclick="this.select()"
+                />
+            </mat-form-field>
+
+            <div
+                class="exclusive-items"
+                style="display: flex"
+                [ngStyle]="getStatusDescription(data)"
+            >
+                <mat-form-field class="exclusive-select" style="width: 30%">
+                    <mat-label>Status</mat-label>
+                    <mat-select
+                        formControlName="RequestStatus"
+                        id="statusSelect"
+                    >
+                        <mat-option value="P">Pendente</mat-option>
+                        <mat-option value="A">Aprovar</mat-option>
+                        <mat-option value="R">Reprovar</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <mat-form-field
+                    class="exclusive-status-description"
+                    style="margin-left: 10px; width: 70%"
+                >
+                    <mat-label>Descrição do Status</mat-label>
+                    <textarea
+                        id="statusDescriptionText"
+                        matInput
+                        placeholder="Motivo do Status selecionado"
+                        formControlName="StatusDescription"
+                    ></textarea>
+                </mat-form-field>
+            </div>
+        </div>
+    </div>
+
+    <div mat-dialog-actions class="mat-dialog-actions">
+        <div style="display: flex; flex: auto">
+            <button
+                style="width: 100%"
+                mat-raised-button
+                type="button"
+                [mat-dialog-close]="false"
+            >
+                Cancelar
+            </button>
+            <button
+                style="width: 100%"
+                mat-raised-button
+                color="primary"
+                type="submit"
+                [disabled]="reqForm.invalid"
+            >
+                {{ data ? 'Atualizar' : 'Salvar' }}
+            </button>
+        </div>
+    </div>
+</form>
