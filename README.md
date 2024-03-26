@@ -56,7 +56,7 @@ select distinct local_tcp_port
 - Para realizar a conexão com o SQL SERVER, é necessário seguir os seguintes passos: Acessar o programa "Sql Server Configuration Manager" ->
   Configurações de Rede do SQl Server -> Protocolos para (nome do seu servidor) -> Habilitar a conexão TCP/IP.
 
-- * A API cria automaticamente a tabela de solicitações de compra, se necessário. *
+- A API cria automaticamente a tabela de solicitações de compra, se necessário.
 
 - No arquivo server.js, configurar a porta do front-end para não ter problemas de CORS.
 
@@ -65,9 +65,9 @@ select distinct local_tcp_port
 
 Requisitos: Angular e Angular Material.
 Conexão com a API:
-Configure as URL's da API no arquivo request.service.ts
+- Configure as URL's da API no arquivo request.service.ts
 
-## ** Pronto para começar!**
+## ** Pronto para começar! **
 
 Acesse os repositórios do Back-end (API) e do Front-end:
 - Back-end: https://github.com/MatheusPiske/purchase_management_app/tree/main/RequestManagementApi
