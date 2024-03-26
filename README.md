@@ -35,9 +35,18 @@ Controle total dos itens que estão sendo pedidos.
 
 - Requisitos: Node.JS com frameworks express, sequelize (Método MVC).
 - Configuração do banco de dados:
-Edite o arquivo db.js e insira o nome do seu usuário para acessar o servidor do SQL Server em 'seu_nome'
-e sua respectiva senha em 'sua_senha':
+#### Edite o arquivo db.js e insira o nome do seu usuário para acessar o servidor do SQL Server em 'seu_nome',
+#### sua respectiva senha em 'sua_senha' e a porta onde o servidor está ativo em 'sua_porta':
+
 const database = new sequelize('PurchaseManagement', 'seu_usuario', 'sua_senha',{
+    dialect: 'mssql', host: 'localhost', port: 'sua_porta'
+});
+
+#### Comando para encontrar a porta do SQL Server:
+
+select distinct local_tcp_port
+  from sys.dm_exec_connections
+ where local_tcp_port is not null
 
 * A API cria automaticamente a tabela de solicitações de compra, se necessário. *
 
